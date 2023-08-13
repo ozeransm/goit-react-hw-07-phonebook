@@ -15,14 +15,14 @@ export const Form = ()=>{
     function handleSubmit(e){
         e.preventDefault();
         
-        if (name&&number){
+        if (name.trim()&&number.trim()){
           if (!contacts.find(el=>el.name===String(name)))
             dispatch(addPhoneBook({name, number}));
           else Notiflix.Notify.failure('Dublicate record');
-          setName('');
-          setPhone('');
-          
+                   
         }else Notiflix.Notify.failure('Empty field');
+        setName('');
+        setPhone('');
     }
     function handlerChange({target:{value, name}}){
       switch(name){
