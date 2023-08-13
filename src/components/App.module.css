@@ -25,6 +25,7 @@
 }
 
 .common button:hover{
+    /* position: absolute; */
     background-color: blue;
     color: bisque;
 }
